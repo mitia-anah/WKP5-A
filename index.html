@@ -1,34 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>WKP5</title>
-	</head>
-	<style>
-		img {
-			max-width: 50%;
-			padding-inline-start: 120px;
-		}
-		h2 {
-			text-align: center;
-		}
-		ul {
-			list-style: none;
-			text-align: center;			
-		}
-		.container {
-			max-width: 100%;
-			background-color: chocolate;
-		}
-	</style>
-	<body>
-		<div class="container"></div>
-		<button class="generate">GENERATE RECIPES</button>
-		<div class="outer-modal">
-			<div class="inner-modal">
-			</div>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>WKP5</title>
+</head>
+<style>
+	img {
+		max-width: 100%;
+	}
+
+	h2,
+	h3 {
+		text-align: center;
+		color: yellow;
+	}
+
+	.container {
+		max-width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
+
+	.button {
+		cursor: pointer;
+		border-radius: 5px;
+		padding: 5px;
+		border: 1px solid yellow;
+}
+
+	.card {
+		background-image: url(rosny1.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+        border-radius: 10px;
+	}
+
+	.outer-modal {
+		display: grid;
+		place-items: center center;
+		background-color: hsla(0, 0%, 0%, 0.7);
+		pointer-events: none;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+	}
+
+	.outer-modal.open {
+		opacity: 1;
+		pointer-events: all;
+	}
+
+	.inner-modal {
+		padding: 10px;
+		background-color: tomato;
+		border-radius: 10px;
+	}
+
+	.inner-modal .card {
+		max-width: 350px;
+	}
+
+	.detail {
+		display: flex;
+		flex-direction: row;
+		color: aliceblue;
+	}
+	p {
+		padding-inline-end: 2rem;
+	}
+	.preparation p{
+		display: flex;
+		flex-direction: column;
+		color: aqua;
+		font-weight: 400;
+		font-size: 20px;
+	}
+
+	.preparation ul {
+		display: flex;
+		flex-direction: column;
+		color: aliceblue;
+		margin: 0;
+	}
+</style>
+
+<body>
+	<div class="container"></div>
+	<button class="generate">GENERATE RECIPES</button>
+	<div class="outer-modal">
+		<div class="inner-modal">
 		</div>
-	</body>
-	<script src="script.js"></script>
+	</div>
+</body>
+<script src="script.js"></script>
+
 </html>
