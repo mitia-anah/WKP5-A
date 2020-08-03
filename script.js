@@ -22,27 +22,27 @@ const recipes = [
 		author: 'Rosny',
 		difficulty: 'easy',
 		timing: '15',
-		ingredients: ['eggs', 'salt', 'water'],
+		ingredients: ['tomato', 'salt', 'carrot salad'],
 		steps: [
-			'Put a pan on the fire',
-			'Crack the eggs on it',
-			'Wait, put them out',
-			'Add some salt on it',
+			'Slice the bread',
+			'put some salad in it',
+			'Add tomato sauce',
+			'Eat it!',
 		],
 		id: 1596168522409,
 	},
 	{
-		title: 'My recipe',
+		title: 'Fried fish',
 		picture: 'https://bit.ly/2ZXyiKI',
 		author: 'Rosny',
 		difficulty: 'easy',
 		timing: '15',
-		ingredients: ['eggs', 'salt', 'water'],
+		ingredients: ['flour', 'fish', 'salt'],
 		steps: [
-			'Put a pan on the fire',
-			'Crack the eggs on it',
-			'Wait, put them out',
-			'Add some salt on it',
+			'Put the pan on the fire',
+			'Pour the oil',
+			'Wait for a while until it is hot',
+			'Fry the fish',
 		],
 		id: 1596168522409,
 	},
@@ -61,15 +61,15 @@ const renderCard = () => {
 	// Set up a loop that goes through the items in the recipes object
     for (let i = 0; i < recipes.length; i++) {
 		const recipesHTML = `
-		<div class="card" data-id="${recipes[i].id}">
-			<h2>${recipes[i].title}</h2>
-			<img src="${recipes[i].picture}" alt="">
-			<div class="detail">
-				<p>timing:${recipes[i].timing}</p>
-				<p>difficulty:${recipes[i].difficulty}<p>
-			</div>
-			<button class="button-info">More Info</button>
-		</div>
+		<div data-id="${recipe.id}">
+		<header><h2>${recipe.title}</h2></header>
+		<img src="${recipe.picture}" alt="${recipe.title}">
+		<ul>
+			<li>Timing:${recipe.timing}</li>
+			<li>Difficulty:${recipe.difficulty}</li>
+		</ul>
+		<button aria-label="More Info">More Info</button>
+	</div>
 		`;
 		container.innerHTML += recipesHTML;
 	}	
