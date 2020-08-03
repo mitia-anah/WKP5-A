@@ -88,8 +88,9 @@ const openModal = e => {
 			</div>	
 			<div class='preparation'>
 				<p>Step:
-				    <ul>
+					<ul>
 					   ${e.steps}
+					</li>
 					</ul>
 				</p>
 				<p>Ingredient:
